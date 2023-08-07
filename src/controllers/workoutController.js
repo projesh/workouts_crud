@@ -1,9 +1,14 @@
 // In src/controllers/workoutController.js
 const workoutService = require("../servers/workoutService")
 
+// Custom made middlewares
+// const authenticate = require("../../middlewares/authenticate");
+// const authorize = require("../../middlewares/authorize");
+
 const getAllWorkouts = (req, res) => {
+    const { mode } = req.query;
     try {
-        const allWorkouts = workoutService.getAllWorkouts();
+        const allWorkouts = workoutService.getAllWorkouts({ mode });
         res.send({ status: "OK", data: allWorkouts });
     } catch (error) {
         res
