@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 // app.use("/api/v1", v1Router);
 app.use(bodyParser.json());
-app.use(cache("2 minutes"));
+// app.use(cache("2 minutes"));
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
