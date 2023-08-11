@@ -10,7 +10,7 @@ const ApiError = require('./utils/ApiError');
 
 const app = express();
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // parse json request body
 app.use(express.json())

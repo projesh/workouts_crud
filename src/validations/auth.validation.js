@@ -1,6 +1,6 @@
 // In ./src/validations/auth.validation.js
 const Joi = require('joi');
-const { password } = require('./custom.validation');
+const { password } = require('./customer.validation');
 
 const register = {
     body: Joi.object().keys({

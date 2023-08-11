@@ -1,4 +1,4 @@
-// In ./index.js
+// In ./src/index.js
 require('dotenv').config()
 const mongoose = require('mongoose')
 
